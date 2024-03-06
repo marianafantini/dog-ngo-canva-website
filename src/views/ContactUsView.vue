@@ -27,7 +27,7 @@ const { Title, Paragraph } = Typography;
         </div>
       </div>
       <div class="second-half">
-        <Image :preview="false" :style="{ borderRadius: '5rem'}" width="80%" src="../../public/assets/contact.jpeg"></Image>
+        <Image :preview="false" :style="{ borderRadius: '5rem'}" width="80%" src="./assets/contact.jpeg"></Image>
       </div>
     </Content>
   </Layout>

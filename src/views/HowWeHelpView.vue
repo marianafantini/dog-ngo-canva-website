@@ -11,21 +11,21 @@ const { Content } = Layout;
 
       <div class="flex">
         <div>
-          <Image height="7rem" :preview="false" src="/assets/dog-icon.png"></Image>
+          <Image height="7rem" :preview="false" src="./assets/dog-icon.png"></Image>
           <Title :level="4">Animal Rescue</Title>
           <Paragraph>
             We go on quests to rescue and recover any dog or cat roaming our streets.
           </Paragraph>
         </div>
         <div>
-          <Image height="7rem" :preview="false" src="/assets/vet-icon.png"></Image>
+          <Image height="7rem" :preview="false" src="./assets/vet-icon.png"></Image>
           <Title :level="4">Veterinary Services</Title>
           <Paragraph>
             We provide free veterinary treatment to strays, rescues, and pets.
           </Paragraph>
         </div>
         <div>
-          <Image height="7rem" :preview="false" src="/assets/home-icon.png"></Image>
+          <Image height="7rem" :preview="false" src="./assets/home-icon.png"></Image>
           <Title :level="4">Fostering and Adoption</Title>
           <Paragraph> We help our rescues find their temporary and forever homes. </Paragraph>
         </div>

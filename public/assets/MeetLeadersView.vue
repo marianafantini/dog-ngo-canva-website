@@ -20,7 +20,7 @@ const volunteerList = [
       </div>
       <div class="second-half">
         <div v-for="volunteer in volunteerList" :key="volunteer">
-          <Image width="8rem" :preview="false" :src="'/assets/' + volunteer.replace(' ','-') + '.jpg'" class="image">
+          <Image width="8rem" :preview="false" :src="'./assets/' + volunteer.replace(' ','-') + '.jpg'" class="image">
           </Image>
           {{ volunteer }}
         </div>

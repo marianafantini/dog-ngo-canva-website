@@ -20,7 +20,7 @@ const volunteerList = [
       </div>
       <div class="second-half">
         <div v-for="volunteer in volunteerList" :key="volunteer">
-          <Image :style="{ borderRadius: '50%', objectFit: 'cover'}" width="6rem" height="6rem" :preview="false" :src="'/assets/' + volunteer.replace(' ','-') + '.jpg'">
+          <Image :style="{ borderRadius: '50%', objectFit: 'cover'}" width="6rem" height="6rem" :preview="false" :src="'./assets/' + volunteer.replace(' ','-') + '.jpg'">
           </Image>
           {{ volunteer }}
         </div>

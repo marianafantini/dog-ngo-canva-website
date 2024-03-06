@@ -33,7 +33,7 @@ const { Content } = Layout;
   background-color: #1c7c54;
 }
 .first-half {
-  background-image: url('../../../public/assets/dog-leash.jpg');
+  background-image: url('/assets/dog-leash.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
 }

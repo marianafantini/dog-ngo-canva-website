@@ -16,7 +16,7 @@ const { Content } = Layout;
 
 <style scoped>
 .layout {
-  background-image: url('../../public/assets/home.jpeg');
+  background-image: url('/assets/home.jpeg');
   background-size: 100% auto;
   background-repeat: no-repeat;
   width: 100%;
