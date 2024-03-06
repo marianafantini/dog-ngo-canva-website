@@ -1,16 +1,11 @@
 <script setup>
-import { Typography, Image } from 'ant-design-vue';
-import {
-  FacebookFilled,
-  TwitterOutlined,
-  InstagramOutlined
-} from '@ant-design/icons-vue';
+import { Typography } from 'ant-design-vue';
+import { FacebookFilled, TwitterOutlined, InstagramOutlined } from '@ant-design/icons-vue';
 const { Title, Paragraph } = Typography;
 </script>
 
 <template>
   <Layout class="layout">
-
     <Content class="content">
       <div class="first-half">
         <div>
@@ -26,9 +21,7 @@ const { Title, Paragraph } = Typography;
           <Title :level="5">#suppawt our quest on social media @reallygreatsite</Title>
         </div>
       </div>
-      <div class="second-half">
-        <Image :preview="false" :style="{ borderRadius: '5rem'}" width="80%" src="./assets/contact.jpeg"></Image>
-      </div>
+      <div class="second-half"></div>
     </Content>
   </Layout>
 </template>
@@ -43,7 +36,6 @@ const { Title, Paragraph } = Typography;
 }
 .first-half {
   background-color: #1c7c54;
-  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,6 +48,8 @@ const { Title, Paragraph } = Typography;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('/assets/formatted-image-contact.png');
+  background-position: center;
   img {
     margin: 0 1rem;
     width: 80%;
@@ -74,5 +68,47 @@ h2,
 h5 {
   color: #ddf1cf;
   margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .first-half,
+  .second-half {
+    width: 50%;
+    height: 100vh;
+  }
+  .first-half {
+    padding: 5rem;
+  }
+  .second-half {
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+  .first-half,
+  .second-half {
+    width: 100%;
+  }
+  .first-half {
+    height: 60vh;
+    padding: 0 2rem;
+  }
+  .second-half {
+    height: 40vh;
+    background-size: 100% auto;
+    background-image: url('/assets/contact.jpeg');
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .paragraph,
+  .green-paragraph {
+    font-size: 1.2rem;
+    width: 100%;
+    font-weight: 400;
+  }
 }
 </style>

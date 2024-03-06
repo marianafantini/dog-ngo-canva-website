@@ -14,10 +14,9 @@ const { Content } = Layout;
   </Layout>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .layout {
   background-image: url('/assets/home.jpeg');
-  background-size: 100% auto;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
@@ -28,11 +27,6 @@ const { Content } = Layout;
 h1,
 h4 {
   color: whitesmoke;
-  margin: 0 5rem;
-  max-width: 27%;
-}
-h1 {
-  font-size: 4rem;
 }
 button {
   margin: 2rem 5rem;
@@ -44,6 +38,34 @@ button {
   &:hover {
     color: #0a3162;
     border-color: #0a3162;
+  }
+}
+@media (min-width: 1024px) {
+  .layout {
+    background-size: 100% auto;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h1,
+  h4 {
+    max-width: 27%;
+    margin: 0 5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .layout {
+    background-size: cover;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h1,
+  h4 {
+    margin: 0 3rem;
+  }
+  button {
+    margin: 3rem;
   }
 }
 </style>

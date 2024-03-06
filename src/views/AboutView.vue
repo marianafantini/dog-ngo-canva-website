@@ -1,5 +1,5 @@
 <script setup>
-import { Layout, Typography, Image } from 'ant-design-vue';
+import { Layout, Typography } from 'ant-design-vue';
 const { Title, Paragraph } = Typography;
 
 const { Content } = Layout;
@@ -20,17 +20,12 @@ const { Content } = Layout;
           With you help, we hope to make a difference in the lives of these wonderful animals.
         </Paragraph>
       </div>
-      <div class="second-half">
-        <Image class="image" :style="{ borderRadius: '5rem'}" width="80%" :preview="false" src="./assets/about.jpeg"></Image>
-      </div>
+      <div class="second-half"></div>
     </Content>
   </Layout>
 </template>
 
 <style lang="scss" scoped>
-.image {
-  border-radius: 1rem;
-}
 .content {
   display: flex;
   width: 100%;
@@ -43,20 +38,17 @@ const { Content } = Layout;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('/assets/formatted-image-about.png');
+  background-position: center;
 }
+
 .first-title {
-  margin: 7rem 5rem 0 5rem;
-  font-size: 3rem;
+  margin-bottom: 0;
+  color: #ddf1cf;
 }
 .second-title {
+  margin-top: 0 !important;
   color: #ddf1cf;
-  margin: 0 5rem 4rem 5rem !important;
-  font-size: 3rem;
-}
-.first-half,
-.second-half {
-  width: 50%;
-  height: 100vh;
 }
 .layout {
   width: 100%;
@@ -64,17 +56,67 @@ const { Content } = Layout;
   display: flex;
   align-items: center;
 }
-.paragraph {
-  font-size: 1.5rem;
-  padding: 0 3rem 0 5rem;
-}
 .first-title,
 .paragraph {
   color: whitesmoke;
-
   .second-title {
     margin: 0 5rem;
     max-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .first-title {
+    margin: 7rem 5rem 0 5rem;
+    font-size: 3rem;
+  }
+  .second-title {
+    margin: 0 5rem 4rem 5rem !important;
+    font-size: 3rem;
+  }
+  .paragraph {
+    font-size: 1.5rem;
+    padding: 0 3rem 0 5rem;
+  }
+  .first-half,
+  .second-half {
+    width: 50%;
+    height: 100vh;
+  }
+  .second-half {
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 1024px) {
+  .first-title,
+  .second-title {
+    font-size: 2.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .paragraph {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0 1rem 0 1rem;
+  }
+  .first-half,
+  .second-half {
+    width: 100%;
+  }
+  .first-half {
+    height: 70vh;
+  }
+  .second-half {
+    height: 30vh;
+    background-size: 100% auto;
+    background-image: url('/assets/about.jpeg');
+    .image {
+      height: 70%;
+    }
+  }
+  .content {
+    flex-direction: column;
   }
 }
 </style>

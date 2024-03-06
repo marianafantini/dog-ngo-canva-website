@@ -36,11 +36,7 @@ const { Content } = Layout;
   background-image: url('/assets/dog-leash.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-.first-half,
-.second-half {
-  width: 50%;
-  height: 100vh;
+  background-position: center;
 }
 .layout {
   width: 100%;
@@ -48,12 +44,7 @@ const { Content } = Layout;
   display: flex;
   align-items: center;
 }
-h2 {
-  color: whitesmoke;
-  font-size: 4.5rem;
-  width: 50%;
-  padding: 2.5rem 4rem 0 4rem;
-}
+h2,
 .paragraph {
   color: whitesmoke;
 }
@@ -65,5 +56,43 @@ h2 {
 }
 .green-paragraph {
   color: #ddf1cf;
+}
+@media (min-width: 1024px) {
+  .first-half,
+  .second-half {
+    width: 50%;
+    height: 100vh;
+  }
+  h2 {
+    font-size: 4.5rem;
+    width: 50%;
+    padding: 2.5rem 4rem 0 4rem;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+  .first-half,
+  .second-half {
+    width: 100%;
+  }
+  .first-half {
+    height: 30vh;
+    background-image: url('/assets/dog-leash-mobile.jpg');
+  }
+  .second-half {
+    height: 70vh;
+  }
+  h2 {
+    font-size: 3rem;
+    padding: 0 2rem;
+  }
+  .paragraph,
+  .green-paragraph {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
 }
 </style>
